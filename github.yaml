@@ -1,0 +1,10 @@
+source:
+  docker_image: "airbyte/source-github"  # Here the airbyte connector type is specified
+  config: 
+    credentials:
+      option_title: "PAT Credentials"  # The second authentication option you've uncommented
+      personal_access_token: "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"  # Taken from https://github.com/settings/tokens
+    repositories:
+      - "pathwaycom/pathway"  # Pathway repository
+    api_url: "https://api.github.com/"
+  streams: issues
